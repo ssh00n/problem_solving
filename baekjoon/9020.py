@@ -36,26 +36,5 @@ for _ in range(T):
                 min_diff = diff
                 min_partition = sorted(partition)
                 
-    
     print(*min_partition)            
     
-    # 조합을 만들어 놓고 가장 차가 작은 수를 출력
-    
-    
-    # for j in range(prime_list):
-        
-    #     N == prime_list[j] + prime_list[j]
-        
-    
-    # print(arr[3:])
-    
-    # 소수 리스트에서 작은수를 우선적으로 꺼내와서 수 조합 만들기
-                
-    # for i in range(3, N+1):
-    #     if arr[i]:
-            
-    #         print(i, end=' ')
-                
-            
-
-
