@@ -35,17 +35,7 @@ n = int(sys.stdin.readline().rstrip())
 
 for _ in range(n):
     data, left, right = input().split()
-    # print(data, left, right)
     tree[data] = Node(data, left, right)
-# for i in range(n):
-#     data, left_node, right_node = input().split()
-#     if left_node == ".":
-#         left_node = None
-#     if right_node == ".":
-#         right_node = None
-#     tree[data] = Node(data, left_node, right_node)
-    
-# print(tree.items())
 
 preorder(tree['A'])
 print()

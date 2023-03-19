@@ -24,5 +24,5 @@ while q:
         if parent[v] == 0:
             parent[v] = current
             q.append(v)
-            
+
 print('\n'.join(map(str, parent[2:])))
