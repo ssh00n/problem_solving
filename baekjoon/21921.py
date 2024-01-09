@@ -8,25 +8,28 @@ visitors = list(map(int, input().split()))
 
 q = deque()
 visitors_in_period = 0
-periods = dict()
+max_visitors = 0
+max_count = 0
 
-for visitor in visitors:
+for i in range(N):
+    visitor = visitors[i]
     q.append(visitor)
     visitors_in_period += visitor
-    if len(q) == X:
-        if visitors_in_period not in periods:
-            periods[visitors_in_period] = 1
-        else:
-            periods[visitors_in_period] += 1
-        oldest_visitor = q.popleft()
-        visitors_in_period -= oldest_visitor
+
+    if i >= X - 1:
+        if visitors_in_period > max_visitors:
+            max_visitors = visitors_in_period
+            max_count = 1
+        elif visitors_in_period == max_visitors:
+            max_count += 1
+
+        visitors_in_period -= q.popleft()
 
 # Least Recently Used Algorithm
 
-max_visitors = max(periods.keys())
 
 if max_visitors:
     print(max_visitors)
-    print(periods[max_visitors])
+    print(max_count)
 else:
     print("SAD")
